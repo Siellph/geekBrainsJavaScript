@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+<script>
+    var count = parseInt(prompt('Укажите сумму которую хотите вложить: '));
+    var procent = parseInt(prompt('Укажите желаемый ежегодный процент: '));
+    var year = parseInt(prompt('Укажите на какой срок, в годах, хотите оформить вклад: '));
+    for (var n=1; n<=year; n++) {
+        count = count + count * procent / 100;
+        alert('Ваша сумма вклада на конец ' + n + ' года составляет ' + Math.floor(count)+' рублей.');
+    }
+    alert('На конец выбранного периода сумма вложений будет равна '+Math.floor(count)+' рублей.');
+</script>
