@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    alert("Давай сыграем в игру! Имеется два диапазона чисел! Попади хотя бы в один диапазон и получи приз!");
+
+    var gate1 = 30;
+    var gate2 = 40;
+    var gate3 = 70;
+    var gate4 = 90;
+    var hit1 = 0;
+    var hit2 = 0;
+    var score = 0;
+
+    var hit1 = prompt("Итак, твое первое число?");
+
+    if (isNaN(hit1)) {
+        alert("Я что-то не понял. Было сказано ввести число!")
+    } else if ((hit1 > gate1) && (hit1 < gate2)) {
+        alert("Молодец, ты попал в диапазон!");
+        score = score + 1
+    } else if ((hit1 > gate3) && (hit1 < gate4)) {
+        alert("Молодец, ты попал в диапазон!");
+        score = score + 1
+    } else {
+        alert("Мимо!");
+    };
+
+    var hit2 = prompt("Второе число?");
+
+    if (isNaN(hit2)) {
+        alert("Я что-то не понял. Было сказано ввести число!")
+    } else if (hit2 == hit1) {
+        alert("Второе число должно быть отлично от первого!");
+    } else if ((hit2 > gate1) && (hit2 < gate2)) {
+        alert("Молодец, ты попал в диапазон")
+        score = score + 1
+    } else if ((hit2 > gate3) && (hit2 < gate4)) {
+        alert("Молодец, ты попал в диапазон");
+        score = score + 1;
+    } else {
+        alert("Мимо!");
+    };
+    alert("Итак, колличество набранных баллов: " + score);
+</script>
